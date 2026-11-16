@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СтройДвор на Карболите — Строительный рынок Орехово-Зуево</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- style.css скомпилирован из style.less. Верстка ведётся в style.less -->
+<!-- Если предпочитаете компиляцию на лету в браузере, подключите less.js и верните
+     <link rel="stylesheet/less" href="style.less"> — но лучше собирать css заранее. -->
+</head>
+<body>
+
+<div class="page">
+
+	<!-- ==================== HEADER ==================== -->
+	<header class="header">
+		<div class="header__inner">
+
+			<a href="#" class="logo">
+				<img src="img/logo-icon.svg" alt="" class="logo__icon">
+				<span class="logo__text">
+					<span class="logo__name">Строй<span class="logo__name-accent">Двор</span></span>
+					<span class="logo__sub">на карболите</span>
+				</span>
+			</a>
+
+			<button type="button" class="catalog-toggle" id="catalogToggle">
+				<span class="catalog-toggle__icon">
+					<span></span><span></span><span></span>
+				</span>
+				Каталог
+			</button>
+
+			<form class="search" action="#">
+				<input type="text" class="search__input" placeholder="Поиск по товарам и категориям">
+				<button type="submit" class="search__btn" aria-label="Найти">
+					<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.2" y2="16.2"></line></svg>
+				</button>
+			</form>
+
+		</div>
+
+		<!-- ============= CATALOG DROPDOWN ============= -->
+		<div class="catalog-drop" id="catalogDrop">
+			<div class="catalog-drop__inner">
+
+				<div class="catalog-drop__col catalog-drop__col--main">
+					<h3 class="catalog-drop__title">Каталог</h3>
+					<ul class="catalog-list">
+						<li class="catalog-list__item catalog-list__item--active">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M2 12l10 5 10-5"/><path d="M2 16l10 5 10-5"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Стройматериалы</b>
+								<i>Щебень • цемент • смеси</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a6.5 6.5 0 0 1-13 0c0-1.153.433-2.294 1-3 1.464 1.5 1 3 1.5 4Z"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Отопление</b>
+								<i>Котлы • радиаторы • трубы</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c0-4 2-7 4-9 0 2 1 3 2 4 1-2 2-3 4-3 3 2 6 5 6 9a8 8 0 0 1-16 0Z"/><path d="M10 15a2 2 0 1 0 4 0c0-1.5-2-2.5-2-4-0 1.5-2 2.5-2 4Z"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Сантехника</b>
+								<i>Ванны • смесители • мебель</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21 14 10"/><path d="M13 5s1-2 3-2 3 2 3 2-2 3-2 3l3 3-2 2-3-3s-2 2-3 2-3-2-3-2 2-3 2-3Z"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Отделочные материалы</b>
+								<i>Краски • обои • панели</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Электроинструмент</b>
+								<i>Дрели • пилы • шлифмашины</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1 5.6 5.6"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Инструмент и крепёж</b>
+								<i>Ручной инструмент • метизы</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Металлопрокат</b>
+								<i>Сетка • профили • древесина</i>
+							</span>
+						</li>
+						<li class="catalog-list__item">
+							<span class="catalog-list__icon">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.2M12 19.8V22M22 12h-2.2M4.2 12H2M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6M19.1 19.1l-1.6-1.6M6.5 6.5 4.9 4.9"/></svg>
+							</span>
+							<span class="catalog-list__text">
+								<b>Сад и огород</b>
+								<i>Инвентарь • полив • уход</i>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="catalog-drop__col catalog-drop__col--sub">
+					<h3 class="catalog-drop__title">Стройматериалы</h3>
+					<div class="sub-grid">
+						<ul class="sub-list">
+							<li>Цемент и смеси</li>
+							<li>Кирпич и блоки</li>
+							<li>Щебень и песок</li>
+							<li>Гипсокартон</li>
+							<li>Профиль и крепёж</li>
+							<li>Листовые материалы</li>
+							<li>Пиломатериалы</li>
+							<li>Доставка материалов</li>
+						</ul>
+						<ul class="sub-list">
+							<li>Утеплители</li>
+							<li>Гидроизоляция</li>
+							<li>Кровельные материалы</li>
+							<li>Фасадные материалы</li>
+							<li>Пена и герметики</li>
+							<li>Металлопрокат</li>
+							<li>Сетка</li>
+						</ul>
+						<ul class="sub-list">
+							<li>Сухие смеси</li>
+							<li>Грунтовки и праймеры</li>
+							<li>Стяжка пола</li>
+							<li>Штукатурка</li>
+							<li>Шпатлёвка</li>
+							<li>Клей для плитки</li>
+							<li>Затирки</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- ============= /CATALOG DROPDOWN ============= -->
+
+	</header>
+
+	<div class="container">
+
+		<!-- ==================== HERO ==================== -->
+		<section class="hero">
+			<div class="hero__text">
+				<h1 class="hero__title">
+					Строительный рынок Орехово-Зуево<br>
+					<span>СтройДвор</span> на Карболите
+				</h1>
+				<p class="hero__desc">
+					в городе Орехово-Зуево, включающий магазины строительных материалов, магазины сантехники, электроинструмента, отделочных материалов, находится на пересечении ул.Дзержинского и 2пр.Дзержинского
+				</p>
+			</div>
+			<div class="hero__image">
+				<img src="img/hero-materials.png" alt="Строительные материалы">
+			</div>
+		</section>
+
+		<!-- ==================== DEPARTMENT CARDS ==================== -->
+		<section class="departments">
+
+			<div class="department-card">
+				<div class="department-card__photo">
+					<img src="img/dept-santehnika.jpg" alt="Сантехника">
+					<span class="department-card__label">Сантехника</span>
+				</div>
+				<div class="department-card__phone">
+					<span class="department-card__phone-icon">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+					</span>
+					<span class="department-card__phone-text">
+						<b>+7 (968) 642-32-40</b>
+						<i>Телефон отдела</i>
+					</span>
+				</div>
+				<p class="department-card__desc">Сантехника, Котлы, Мебель для ванн и кухонь</p>
+			</div>
+
+			<div class="department-card">
+				<div class="department-card__photo">
+					<img src="img/dept-kraski.jpg" alt="Краски и декор">
+					<span class="department-card__label">Краски и декор</span>	
+				</div>
+				<div class="department-card__phone">
+					<span class="department-card__phone-icon">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+					</span>
+					<span class="department-card__phone-text">
+						<b>+7 (968) 642-34-00</b>
+						<i>Телефон отдела</i>
+					</span>
+				</div>
+				<p class="department-card__desc">Краски, Обои, Внутренняя отделка, Хоз-товары, Спецодежда</p>
+			</div>
+
+			<div class="department-card">
+				<div class="department-card__photo">
+					<img src="img/dept-instrument.jpg" alt="Инструменты">
+					<span class="department-card__label">Инструменты</span>
+				</div>
+				<div class="department-card__phone">
+					<span class="department-card__phone-icon">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+					</span>
+					<span class="department-card__phone-text">
+						<b>+7 (968) 642-30-59</b>
+						<i>Телефон отдела</i>
+					</span>
+				</div>
+				<p class="department-card__desc">Электротовары, Электроинструменты, Инструменты, Метизы, Крепеж</p>
+			</div>
+
+			<div class="department-card">
+				<div class="department-card__photo">
+					<img src="img/dept-stroymat.jpg" alt="Стройматериалы">
+					<span class="department-card__label">Стройматериалы</span>
+				</div>
+				<div class="department-card__phone">
+					<span class="department-card__phone-icon">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+					</span>
+					<span class="department-card__phone-text">
+						<b>+7 (925) 499-70-70</b>
+						<i>Телефон отдела</i>
+					</span>
+				</div>
+				<p class="department-card__desc">Цемент, Сухие смеси, Металлопрокат, Лес, Изоляция, Утеплители</p>
+			</div>
+
+		</section>
+
+		<!-- ==================== CATEGORIES ==================== -->
+		<section class="categories">
+			<h2 class="categories__title">Категории</h2>
+
+			<div class="categories__grid">
+
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+				<a href="#" class="cat-card">
+					<span class="cat-card__title">Электрика</span>
+					<img class="cat-card__img" src="img/cat-bulb.png" alt="Электрика">
+					<span class="cat-card__arrow">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</span>
+				</a>
+			
+			</div>
+		</section>
+
+		<!-- ==================== ABOUT ==================== -->
+		<section class="about">
+
+			<div class="about__card">
+				<div class="about__card-top">
+					<img src="img/logo-icon-white.svg" alt="" class="about__logo-icon">
+					<span class="about__logo-text">
+						Строй<span>Двор</span>
+						<i>стройматериалы</i>
+					</span>
+				</div>
+
+				<div class="about__hours">
+					<div class="about__days">
+						<span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span>
+					</div>
+					<div class="about__time">8.00–20.00</div>
+					<div class="about__day-single">ВС</div>
+					<div class="about__time about__time--sun">8.00–19.00</div>
+				</div>
+
+				<div class="about__address">
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.4 7-12.6A7 7 0 0 0 5 9.4C5 14.6 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+					г. Орехово-Зуево, ул Дзержинского 36
+				</div>
+
+				<div class="about__site">
+					<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+					DVOROZ.RU
+				</div>
+			</div>
+
+			<div class="about__text">
+				<h3>Более 25 000 товаров для строительства и ремонта</h3>
+				<p>Строительный рынок «СтройДвор на Карболите» в Орехово-Зуево представляет собой торговый комплекс площадью 2 000 м².</p>
+				<p>На территории комплекса расположены открытая площадка, отдельный магазин сантехники, красок и инструментов, размещённый в трёхэтажном здании, а также удобная автомобильная стоянка.</p>
+				<p>В нашем магазине строительных материалов можно оформить заказ через интернет с доставкой. Собственный автопарк позволяет доставить любой заказ каждому клиенту.</p>
+				<p>В комплексе в наличии широкий ассортимент строительных и отделочных материалов. Опытные продавцы-консультанты всегда готовы помочь с выбором и обеспечить высокий уровень обслуживания независимо от объёма приобретаемой партии товара.</p>
+				<p>Осуществляется доставка по Орехово-Зуево и всей Московской области.</p>
+			</div>
+
+		</section>
+
+	</div>
+
+	<!-- ==================== FOOTER ==================== -->
+	<footer class="footer">
+		Стройматериалы Орехово-Зуево СтройДвор на Карболите– торговый центр 2012-2026
+	</footer>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
